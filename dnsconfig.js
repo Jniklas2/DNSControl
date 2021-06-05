@@ -41,7 +41,6 @@ var MAIL01 = [
 
   // SRV
   SRV("_autodiscover._tcp", 0, 1, 443, "mail.cxsrv.de."),
-  SRV("_autodiscover._tcp", 0, 0, 443, "mail.cxsrv.de."),
   SRV("_caldavs._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_carddavs._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_imaps._tcp", 0, 1, 993, "mail.cxsrv.de."),
