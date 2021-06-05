@@ -29,6 +29,16 @@ var MAIL01 = [
   // MX
   MX("@", 10, "mail.cxsrv.de."),
 
+  // SPF
+  SPF_BUILDER({
+    label: "@",
+    parts: ["v=spf1", "mx", "~all"],
+  }),
+  SPF_BUILDER({
+    label: "*",
+    parts: ["v=spf1", "mx", "~all"],
+  }),
+
   // SRV
   SRV("_autodiscover._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_autodiscover._tcp", 0, 0, 443, "mail.cxsrv.de."),
@@ -45,6 +55,10 @@ var MAIL01 = [
   // TXT
   TXT("_caldavs._tcp", "path=/SOGo/dav/"),
   TXT("_carddavs._tcp", "path=/SOGo/dav/"),
+  TXT(
+    "_dmarc",
+    "v=DMARC1; p=quarantine; rua=mailto:dmarc@fhsrv.de; ruf=mailto:dmarc@fhsrv.de; fo=1;"
+  ),
 ];
 
 // Domains - Backend
@@ -58,14 +72,14 @@ D(
 
   // A
   A("backup", "148.251.152.30"),
-  A("data2", "159.69.203.63"),
+  A("data", "159.69.203.63"),
   A("dh1", "94.130.75.68"),
   A("mail", "157.90.168.57"),
   A("voice", "162.55.60.38"),
 
   // AAAA
   AAAA("backup", "2a01:4f8:210:5126::1"),
-  AAAA("data2", "2a01:4f8:1c1c:5b1d::1"),
+  AAAA("data", "2a01:4f8:1c1c:5b1d::1"),
   AAAA("dh1", "2a01:4f8:c0c:e911::1"),
   AAAA("mail", "2a01:4f8:1c1c:4a9d::1"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
@@ -80,14 +94,9 @@ D(
   ),
 
   // TXT
-  TXT("@", "v=spf1 mx -all"),
   TXT(
     "dkim._domainkey",
     "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvcIuuPwv7AkPYFt9zMeHb+5Cim3KwVX7yV9y3cmqvJUKpBpowLZA4H549++lN9TIUhGLSJlx2oL+J5ykkSnC4my/1FFPA1NCjXxvRrd841tCsjTM3XuMyx2WkW7mV+Oc6VMpMUZT78SKW5OZ38pEqldRfsfkHb7S5/7dVgY5BU5RVNU8w4BDpq9MYi1XHz0Th/hw0Ww/4z2wZOL2qBtotX3Y96u0KDIK7wC/UGJbesiwkzTVRwOFK24Loz6GMQR1LdcdqaAFkKkIKNzjgCc8kPoO6BexXR2tKJ2hKP8lUwxSdwMzd66TdVxErSbFuaoKJcc6xylWK32AIzq4ZXY8iQIDAQAB"
-  ),
-  TXT(
-    "_dmarc",
-    "v=DMARC1; p=reject; rua=mailto:admin@cxsrv.de; ruf=mailto:admin@cxsrv.de;"
   )
 );
 
@@ -100,17 +109,11 @@ D(
   DEFAULT,
   MAIL01,
 
-  // A
-  A("data", "159.69.203.63"),
-
-  // AAAA
-  AAAA("data", "2a01:4f8:1c1c:5b1d::1"),
-
   // CNAME
   CNAME("amongus", "dh1.cxsrv.de."),
-  CNAME("cloud", "data.rsmg-clan.de."),
+  CNAME("cloud", "data.cxsrv.de."),
   CNAME("crewlink", "voice.cxsrv.de."),
-  CNAME("git", "data.rsmg-clan.de."),
+  CNAME("git", "data.cxsrv.de."),
   CNAME("mail", "mail.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("pma", "dh1.cxsrv.de."),
@@ -124,10 +127,5 @@ D(
   TXT(
     "dkim._domainkey",
     "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Jc/+r8ChOpWRr+inJrScjxuuSY3dHEuhdAWGIqZ1n2eBFzi3uUwUdeocHRS825N1w54FkYiFHZ97c13CBNnJIYcrMEfxbOqhblDivQ8L+9TFHjUs63dtUCfCPg0HBAhtswFYGtbSlIZJOJXcN5InhTLJClu10PF5EgWmaBslEpVo6NKq1JyVp47WOL8c/fOaJMywy3qKOs28fuXWpd3PzWfKRo5eIx/G5doLTGJNOo+WroxNat9OTKnn6pUvGO9ndzsbF5tHAoBQqYVIDWIMciMAasTFLPtj4M7Bc2AHT9xtQeIGMzSpg5E9RIc2lE+eNjmlpRNxFKWXmtRb5OiaQIDAQAB"
-  ),
-  TXT(
-    "_dmarc",
-    "v=DMARC1; p=reject; rua=mailto:admin@rsmg-clan.de; ruf=mailto:admin@rsmg-clan.de;"
-  ),
-  TXT("@", "v=spf1 mx -all")
+  )
 );
