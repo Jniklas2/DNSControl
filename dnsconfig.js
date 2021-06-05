@@ -14,6 +14,7 @@ var DEFAULT = [
 	  issue: ["letsencrypt.org"],
 	  issuewild: ["letsencrypt.org"],
 	}),
+	DnsProvider(cloudflare),
 ];
 
 var MAIL01 = [
@@ -36,11 +37,12 @@ var MAIL01 = [
 	SRV('_submission._tcp', 0, 1, 587, 'mail.cxsrv.de.'),
 ];
 
-// Backend
+// Domains - Backend
 
+// cxsrv.de
 D(
-	"cxsrv.de", REG_CHANGEME,
-	DnsProvider(cloudflare),
+	"cxsrv.de",
+	REG_CHANGEME,
 	DEFAULT,
 	MAIL01,
 	A('data2', '159.69.203.63'),
@@ -55,13 +57,14 @@ D(
 	TXT('@', 'v=spf1 mx -all'),
 	TXT('dkim._domainkey', 'v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvcIuuPwv7AkPYFt9zMeHb+5Cim3KwVX7yV9y3cmqvJUKpBpowLZA4H549++lN9TIUhGLSJlx2oL+J5ykkSnC4my/1FFPA1NCjXxvRrd841tCsjTM3XuMyx2WkW7mV+Oc6VMpMUZT78SKW5OZ38pEqldRfsfkHb7S5/7dVgY5BU5RVNU8w4BDpq9MYi1XHz0Th/hw0Ww/4z2wZOL2qBtotX3Y96u0KDIK7wC/UGJbesiwkzTVRwOFK24Loz6GMQR1LdcdqaAFkKkIKNzjgCc8kPoO6BexXR2tKJ2hKP8lUwxSdwMzd66TdVxErSbFuaoKJcc6xylWK32AIzq4ZXY8iQIDAQAB'),
 	TXT('_dmarc', 'v=DMARC1; p=reject; rua=mailto:admin@cxsrv.de; ruf=mailto:admin@cxsrv.de;')
-)
+);
 
-// Projektdomains
+// Domains - Projekte
 
+// rsmg-clan.de
 D(
-	"rsmg-clan.de", REG_CHANGEME,
-	DnsProvider(cloudflare),
+	"rsmg-clan.de",
+	REG_CHANGEME,
 	DEFAULT,
 	MAIL01,
 	A('backup', '148.251.152.30'),
@@ -81,4 +84,4 @@ D(
 	TXT('dkim._domainkey', 'v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Jc/+r8ChOpWRr+inJrScjxuuSY3dHEuhdAWGIqZ1n2eBFzi3uUwUdeocHRS825N1w54FkYiFHZ97c13CBNnJIYcrMEfxbOqhblDivQ8L+9TFHjUs63dtUCfCPg0HBAhtswFYGtbSlIZJOJXcN5InhTLJClu10PF5EgWmaBslEpVo6NKq1JyVp47WOL8c/fOaJMywy3qKOs28fuXWpd3PzWfKRo5eIx/G5doLTGJNOo+WroxNat9OTKnn6pUvGO9ndzsbF5tHAoBQqYVIDWIMciMAasTFLPtj4M7Bc2AHT9xtQeIGMzSpg5E9RIc2lE+eNjmlpRNxFKWXmtRb5OiaQIDAQAB'),
 	TXT('_dmarc', 'v=DMARC1; p=reject; rua=mailto:admin@rsmg-clan.de; ruf=mailto:admin@rsmg-clan.de;'),
 	TXT('@', 'v=spf1 mx -all')
-)
+);
