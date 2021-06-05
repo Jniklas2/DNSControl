@@ -58,14 +58,14 @@ D(
 
   // A
   A("backup", "148.251.152.30"),
-  A("data2", "159.69.203.63"),
+  A("data", "159.69.203.63"),
   A("dh1", "94.130.75.68"),
   A("mail", "157.90.168.57"),
   A("voice", "162.55.60.38"),
 
   // AAAA
   AAAA("backup", "2a01:4f8:210:5126::1"),
-  AAAA("data2", "2a01:4f8:1c1c:5b1d::1"),
+  AAAA("data", "2a01:4f8:1c1c:5b1d::1"),
   AAAA("dh1", "2a01:4f8:c0c:e911::1"),
   AAAA("mail", "2a01:4f8:1c1c:4a9d::1"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
@@ -99,12 +99,6 @@ D(
   REG_CHANGEME,
   DEFAULT,
   MAIL01,
-
-  // A
-  A("data", "159.69.203.63"),
-
-  // AAAA
-  AAAA("data", "2a01:4f8:1c1c:5b1d::1"),
 
   // CNAME
   CNAME("amongus", "dh1.cxsrv.de."),
