@@ -2,6 +2,7 @@ var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
 var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
 
 var DEFAULT = [
+  // CAA
   CAA_BUILDER({
     label: "*",
     iodef: "mailto:admin@cxsrv.de",
@@ -14,16 +15,21 @@ var DEFAULT = [
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
+
+  // DNS Provider
   DnsProvider(cloudflare),
 ];
 
 var MAIL01 = [
-  MX("@", 10, "mail.cxsrv.de."),
+  // CNAME
   CNAME("autoconfig", "mail.cxsrv.de."),
   CNAME("autodiscover", "mail.cxsrv.de."),
   CNAME("webmail", "mail.cxsrv.de."),
-  TXT("_caldavs._tcp", "path=/SOGo/dav/"),
-  TXT("_carddavs._tcp", "path=/SOGo/dav/"),
+
+  // MX
+  MX("@", 10, "mail.cxsrv.de."),
+
+  // SRV
   SRV("_autodiscover._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_autodiscover._tcp", 0, 0, 443, "mail.cxsrv.de."),
   SRV("_caldavs._tcp", 0, 1, 443, "mail.cxsrv.de."),
@@ -35,6 +41,10 @@ var MAIL01 = [
   SRV("_sieve._tcp", 0, 1, 4190, "mail.cxsrv.de."),
   SRV("_smtps._tcp", 0, 1, 465, "mail.cxsrv.de."),
   SRV("_submission._tcp", 0, 1, 587, "mail.cxsrv.de."),
+
+  // TXT
+  TXT("_caldavs._tcp", "path=/SOGo/dav/"),
+  TXT("_carddavs._tcp", "path=/SOGo/dav/"),
 ];
 
 // Domains - Backend
@@ -45,14 +55,22 @@ D(
   REG_CHANGEME,
   DEFAULT,
   MAIL01,
+
+  // A
+  A("backup", "148.251.152.30"),
   A("data2", "159.69.203.63"),
   A("dh1", "94.130.75.68"),
   A("mail", "157.90.168.57"),
   A("voice", "162.55.60.38"),
+
+  // AAAA
+  AAAA("backup", "2a01:4f8:210:5126::1"),
   AAAA("data2", "2a01:4f8:1c1c:5b1d::1"),
   AAAA("dh1", "2a01:4f8:c0c:e911::1"),
   AAAA("mail", "2a01:4f8:1c1c:4a9d::1"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
+
+  // TLSA
   TLSA(
     "_25._tcp.mail",
     3,
@@ -60,6 +78,8 @@ D(
     1,
     "8dd735fc435585f048b12b576cf11a89187e820b3a57ff72d1172f9a6bdad128"
   ),
+
+  // TXT
   TXT("@", "v=spf1 mx -all"),
   TXT(
     "dkim._domainkey",
@@ -79,10 +99,14 @@ D(
   REG_CHANGEME,
   DEFAULT,
   MAIL01,
-  A("backup", "148.251.152.30"),
+
+  // A
   A("data", "159.69.203.63"),
-  AAAA("backup", "2a01:4f8:210:5126::1"),
+
+  // AAAA
   AAAA("data", "2a01:4f8:1c1c:5b1d::1"),
+
+  // CNAME
   CNAME("amongus", "dh1.cxsrv.de."),
   CNAME("cloud", "data.rsmg-clan.de."),
   CNAME("crewlink", "voice.cxsrv.de."),
@@ -92,7 +116,11 @@ D(
   CNAME("pma", "dh1.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
   CNAME("vpn", "dh1.cxsrv.de."),
+
+  // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "ts3.rsmg-clan.de."),
+
+  // TXT
   TXT(
     "dkim._domainkey",
     "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4Jc/+r8ChOpWRr+inJrScjxuuSY3dHEuhdAWGIqZ1n2eBFzi3uUwUdeocHRS825N1w54FkYiFHZ97c13CBNnJIYcrMEfxbOqhblDivQ8L+9TFHjUs63dtUCfCPg0HBAhtswFYGtbSlIZJOJXcN5InhTLJClu10PF5EgWmaBslEpVo6NKq1JyVp47WOL8c/fOaJMywy3qKOs28fuXWpd3PzWfKRo5eIx/G5doLTGJNOo+WroxNat9OTKnn6pUvGO9ndzsbF5tHAoBQqYVIDWIMciMAasTFLPtj4M7Bc2AHT9xtQeIGMzSpg5E9RIc2lE+eNjmlpRNxFKWXmtRb5OiaQIDAQAB"
