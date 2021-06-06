@@ -2,7 +2,6 @@ var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
 var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
 
 DEFAULTS(
-  // CAA
   CAA_BUILDER({
     label: "*",
     iodef: "mailto:admin@cxsrv.de",
@@ -15,8 +14,6 @@ DEFAULTS(
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
-
-  // DNS Provider
   DnsProvider(cloudflare)
 );
 
@@ -43,10 +40,10 @@ var MAIL01 = [
   SRV("_autodiscover._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_caldavs._tcp", 0, 1, 443, "mail.cxsrv.de."),
   SRV("_carddavs._tcp", 0, 1, 443, "mail.cxsrv.de."),
-  SRV("_imaps._tcp", 0, 1, 993, "mail.cxsrv.de."),
   SRV("_imap._tcp", 0, 1, 143, "mail.cxsrv.de."),
-  SRV("_pop3s._tcp", 0, 1, 995, "mail.cxsrv.de."),
+  SRV("_imaps._tcp", 0, 1, 993, "mail.cxsrv.de."),
   SRV("_pop3._tcp", 0, 1, 110, "mail.cxsrv.de."),
+  SRV("_pop3s._tcp", 0, 1, 995, "mail.cxsrv.de."),
   SRV("_sieve._tcp", 0, 1, 4190, "mail.cxsrv.de."),
   SRV("_smtps._tcp", 0, 1, 465, "mail.cxsrv.de."),
   SRV("_submission._tcp", 0, 1, 587, "mail.cxsrv.de."),
@@ -106,16 +103,22 @@ D(
   REG_CHANGEME,
   MAIL01,
 
-  // CNAME
-  CNAME("amongus", "dh1.cxsrv.de."),
+  // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
-  CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
-  CNAME("mail", "mail.cxsrv.de."),
-  CNAME("music", "voice.cxsrv.de."),
+
+  // CNAME - DH1
+  CNAME("amongus", "dh1.cxsrv.de."),
   CNAME("pma", "dh1.cxsrv.de."),
-  CNAME("ts3", "voice.cxsrv.de."),
   CNAME("vpn", "dh1.cxsrv.de."),
+
+  // CNAME - MAIL
+  CNAME("mail", "mail.cxsrv.de."),
+
+  // CNAME - VOICE
+  CNAME("crewlink", "voice.cxsrv.de."),
+  CNAME("music", "voice.cxsrv.de."),
+  CNAME("ts3", "voice.cxsrv.de."),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "ts3.rsmg-clan.de."),
