@@ -106,16 +106,22 @@ D(
   REG_CHANGEME,
   MAIL01,
 
-  // CNAME
-  CNAME("amongus", "dh1.cxsrv.de."),
+  // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
-  CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
-  CNAME("mail", "mail.cxsrv.de."),
-  CNAME("music", "voice.cxsrv.de."),
+
+  // CNAME - DH1
+  CNAME("amongus", "dh1.cxsrv.de."),
   CNAME("pma", "dh1.cxsrv.de."),
-  CNAME("ts3", "voice.cxsrv.de."),
   CNAME("vpn", "dh1.cxsrv.de."),
+
+  // CNAME - MAIL
+  CNAME("mail", "mail.cxsrv.de."),
+
+  // CNAME - VOICE
+  CNAME("crewlink", "voice.cxsrv.de."),
+  CNAME("music", "voice.cxsrv.de."),
+  CNAME("ts3", "voice.cxsrv.de."),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "ts3.rsmg-clan.de."),
