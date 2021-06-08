@@ -53,7 +53,7 @@ var MAIL01 = [
   TXT("_carddavs._tcp", "path=/SOGo/dav/"),
   TXT(
     "_dmarc",
-    "v=DMARC1; p=quarantine; rua=mailto:dmarc@fhsrv.de; ruf=mailto:dmarc@fhsrv.de; fo=1;"
+    "v=DMARC1; p=quarantine; rua=mailto:reports@dmarc.fhsrv.de; ruf=mailto:reports@dmarc.fhsrv.de; fo=1;"
   ),
 ];
 
