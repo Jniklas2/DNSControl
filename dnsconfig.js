@@ -1,5 +1,5 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-var REG_CHANGEME = NewRegistrar("ThirdParty", "NONE");
+var REGISTRAR = NewRegistrar("ThirdParty", "NONE");
 
 DEFAULTS(
   CAA_BUILDER({
@@ -62,24 +62,32 @@ var MAIL01 = [
 // cxsrv.de
 D(
   "cxsrv.de",
-  REG_CHANGEME,
+  REGISTRAR,
   MAIL01,
 
-  // A
+  // A / AAAA - Backup
   A("backup", "148.251.152.30"),
+  AAAA("backup", "2a01:4f8:210:5126::1"),
+
+  // A / AAAA - Data
   A("data", "159.69.22.64"),
   A("dataold", "159.69.203.63"),
-  A("dh1", "94.130.75.68"),
-  A("mail", "157.90.168.57"),
-  A("voice", "162.55.60.38"),
-
-  // AAAA
-  AAAA("backup", "2a01:4f8:210:5126::1"),
   AAAA("data", "2a01:4f8:c0c:e72c::1"),
-  AAAA("dataold", "2a01:4f8:1c1c:5b1d::1"),
+
+  // A / AAAA - DH1
+  A("dh1", "94.130.75.68"),
   AAAA("dh1", "2a01:4f8:c0c:e911::1"),
+
+  // A / AAAA - Mail
+  A("mail", "157.90.168.57"),
   AAAA("mail", "2a01:4f8:1c1c:4a9d::1"),
+
+  // A / AAAA - Voice
+  A("voice", "162.55.60.38"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
+
+  // SRV
+  SRV("_ts3._udp.voice", 1, 1, 9987, "voice.cxsrv.de."),
 
   // TLSA
   TLSA(
@@ -102,7 +110,7 @@ D(
 // rsmg-clan.de
 D(
   "rsmg-clan.de",
-  REG_CHANGEME,
+  REGISTRAR,
   MAIL01,
 
   // CNAME - DATA
@@ -121,9 +129,6 @@ D(
   CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
-
-  // SRV
-  SRV("_ts3._udp.ts3", 1, 1, 9987, "ts3.rsmg-clan.de."),
 
   // TXT
   TXT(
