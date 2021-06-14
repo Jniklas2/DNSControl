@@ -71,7 +71,6 @@ D(
 
   // A / AAAA - Data
   A("data", "159.69.22.64"),
-  A("dataold", "159.69.203.63"),
   AAAA("data", "2a01:4f8:c0c:e72c::1"),
 
   // A / AAAA - DH1
