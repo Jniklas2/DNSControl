@@ -86,9 +86,6 @@ D(
   A("voice", "162.55.60.38"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
 
-  // SRV
-  SRV("_ts3._udp.voice", 1, 1, 9987, "voice.cxsrv.de."),
-
   // TLSA
   TLSA(
     "_25._tcp.mail",
@@ -129,6 +126,9 @@ D(
   CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
+
+  // SRV
+  SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 
   // TXT
   TXT(
