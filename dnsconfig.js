@@ -65,23 +65,23 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // A / AAAA - Backup
+  // A / AAAA - Backup (FSN4)
   A("backup", "148.251.152.30"),
   AAAA("backup", "2a01:4f8:210:5126::1"),
 
-  // A / AAAA - Data
+  // A / AAAA - Data (NBG1-DC3)
   A("data", "159.69.22.64"),
   AAAA("data", "2a01:4f8:c0c:e72c::1"),
 
-  // A / AAAA - DH1
-  A("dh1", "94.130.75.68"),
-  AAAA("dh1", "2a01:4f8:c0c:e911::1"),
+  // A / AAAA - DH1 (FSN1-DC14)
+  A("dh1", "168.119.102.39"),
+  AAAA("dh1", "2a01:4f8:c010:3218::1"),
 
-  // A / AAAA - Mail
+  // A / AAAA - Mail (NBG1-DC3)
   A("mail", "157.90.168.57"),
   AAAA("mail", "2a01:4f8:1c1c:4a9d::1"),
 
-  // A / AAAA - Voice
+  // A / AAAA - Voice (NBG1-DC3)
   A("voice", "162.55.60.38"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
 
