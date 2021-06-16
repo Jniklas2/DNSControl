@@ -70,12 +70,12 @@ D(
   AAAA("backup", "2a01:4f8:210:5126::1"),
 
   // A / AAAA - Data (NBG1-DC3)
-  A("data", "168.119.102.39"),
-  AAAA("data", "2a01:4f8:c010:3218::1"),
+  A("data", "159.69.22.64"),
+  AAAA("data", "2a01:4f8:c0c:e72c::1"),
 
   // A / AAAA - DH1 (FSN1-DC14)
-  A("dh1", "94.130.75.68"),
-  AAAA("dh1", "2a01:4f8:c0c:e911::1"),
+  A("dh1", "168.119.102.39"),
+  AAAA("dh1", "2a01:4f8:c0c:e72c::1"),
 
   // A / AAAA - Mail (NBG1-DC3)
   A("mail", "157.90.168.57"),
