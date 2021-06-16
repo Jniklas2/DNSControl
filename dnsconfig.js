@@ -75,7 +75,7 @@ D(
 
   // FSN1-DC14 - Mail
   A("mail", "162.55.164.139"),
-  AAAA("mail", "2a01:4f8:c010:758f::/1"),
+  AAAA("mail", "2a01:4f8:c010:758f::1"),
 
   // NBG-DC3 - Data
   A("data", "159.69.22.64"),
