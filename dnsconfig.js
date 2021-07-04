@@ -112,7 +112,6 @@ D(
   // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
-  CNAME("kanboard", "data.cxsrv.de."),
 
   // CNAME - DH1
   CNAME("amongus", "dh1.cxsrv.de."),
