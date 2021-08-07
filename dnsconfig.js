@@ -117,11 +117,6 @@ D(
   CNAME("cloud", "data.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
 
-  // CNAME - DH1
-  CNAME("amongus", "dh1.cxsrv.de."),
-  CNAME("pma", "dh1.cxsrv.de."),
-  CNAME("vpn", "dh1.cxsrv.de."),
-
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
@@ -129,9 +124,12 @@ D(
   CNAME("mc", "mc.cxsrv.de."),
 
   // CNAME - VOICE
+  CNAME("amongus", "voice.cxsrv.de."),
   CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
+  CNAME("pma", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
+  CNAME("vpn", "voice.cxsrv.de."),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
