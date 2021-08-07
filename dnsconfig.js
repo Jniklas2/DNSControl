@@ -77,10 +77,6 @@ D(
   A("mc", "162.55.164.139"),
   AAAA("mc", "2a01:4f8:c010:758f::1"),
 
-  // NBG-DC3 - Data
-  A("data", "159.69.22.64"),
-  AAAA("data", "2a01:4f8:c0c:e72c::1"),
-
   // NBG1-DC3 - Voice
   A("voice", "162.55.60.38"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
@@ -109,10 +105,6 @@ D(
   REGISTRAR,
   MAIL01,
 
-  // CNAME - DATA
-  CNAME("cloud", "data.cxsrv.de."),
-  CNAME("git", "data.cxsrv.de."),
-
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
@@ -121,7 +113,9 @@ D(
 
   // CNAME - VOICE
   CNAME("amongus", "voice.cxsrv.de."),
+  CNAME("cloud", "voice.cxsrv.de."),
   CNAME("crewlink", "voice.cxsrv.de."),
+  CNAME("git", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("pma", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
