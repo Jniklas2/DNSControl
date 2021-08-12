@@ -21,7 +21,6 @@ var MAIL01 = [
   // CNAME
   CNAME("autoconfig", "mail.cxsrv.de."),
   CNAME("autodiscover", "mail.cxsrv.de."),
-  CNAME("webmail", "mail.cxsrv.de."),
 
   // MX
   MX("@", 10, "mail.cxsrv.de."),
@@ -69,13 +68,25 @@ D(
   A("backup", "148.251.152.30"),
   AAAA("backup", "2a01:4f8:210:5126::1"),
 
+  // DUS1 - DATA
+  A("data", "161.97.146.6"),
+  AAAA("data", "2a02:c206:3007:8578::1"),
+
   // DUS1 - Mail
   A("mail", "161.97.146.6"),
   AAAA("mail", "2a02:c206:3007:8578::1"),
 
-  // NBG1-DC3 - Voice
-  A("voice", "162.55.60.38"),
-  AAAA("voice", "2a01:4f8:1c1c:9680::1"),
+  // DUS1 - MC
+  A("mc", "161.97.146.6"),
+  AAAA("mc", "2a02:c206:3007:8578::1"),
+
+  // DUS1 - VOICE
+  A("voice", "161.97.146.6"),
+  AAAA("voice", "2a02:c206:3007:8578::1"),
+
+  // NBG1-DC3 - VoiceOld
+  A("voiceold", "162.55.60.38"),
+  AAAA("voiceold", "2a01:4f8:1c1c:9680::1"),
 
   // TLSA
   TLSA(
@@ -101,19 +112,23 @@ D(
   REGISTRAR,
   MAIL01,
 
+  // CNAME - DATA
+  CNAME("cloud", "data.cxsrv.de."),
+  CNAME("git", "voiceold.cxsrv.de."),
+  CNAME("pma", "data.cxsrv.de."),
+  CNAME("vpn", "data.cxsrv.de."),
+
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
-  CNAME("mc", "mail.cxsrv.de."),
+
+  // CNAME - MC
+  CNAME("mc", "mc.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("amongus", "voice.cxsrv.de."),
-  CNAME("cloud", "voice.cxsrv.de."),
-  CNAME("crewlink", "voice.cxsrv.de."),
-  CNAME("git", "voice.cxsrv.de."),
-  CNAME("music", "voice.cxsrv.de."),
-  CNAME("pma", "voice.cxsrv.de."),
+  CNAME("amongus", "voiceold.cxsrv.de."),
+  CNAME("crewlink", "voiceold.cxsrv.de."),
+  CNAME("music", "voiceold.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
-  CNAME("vpn", "voice.cxsrv.de."),
 
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
