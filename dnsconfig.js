@@ -76,9 +76,9 @@ D(
   A("mail", "161.97.146.6"),
   AAAA("mail", "2a02:c206:3007:8578::1"),
 
-  // DUS1 - MC
-  A("mc", "161.97.146.6"),
-  AAAA("mc", "2a02:c206:3007:8578::1"),
+  // DUS1 - GAMES
+  A("games", "161.97.146.6"),
+  AAAA("games", "2a02:c206:3007:8578::1"),
 
   // DUS1 - VOICE
   A("voice", "161.97.146.6"),
@@ -121,13 +121,13 @@ D(
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
-  // CNAME - MC
-  CNAME("mc", "mc.cxsrv.de."),
+  // CNAME - GAMES
+  CNAME("amongus", "games.cxsrv.de."),
+  CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("amongus", "voiceold.cxsrv.de."),
-  CNAME("crewlink", "voiceold.cxsrv.de."),
-  CNAME("music", "voiceold.cxsrv.de."),
+  CNAME("crewlink", "voice.cxsrv.de."),
+  CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
   // SRV
