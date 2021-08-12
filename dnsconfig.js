@@ -73,10 +73,6 @@ D(
   A("mail", "161.97.146.6"),
   AAAA("mail", "2a02:c206:3007:8578::1"),
 
-  // FSN1-DC14 - MC
-  A("mc", "162.55.164.139"),
-  AAAA("mc", "2a01:4f8:c010:758f::1"),
-
   // NBG1-DC3 - Voice
   A("voice", "162.55.60.38"),
   AAAA("voice", "2a01:4f8:1c1c:9680::1"),
@@ -107,9 +103,7 @@ D(
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
-
-  // CNAME - MC
-  CNAME("mc", "mc.cxsrv.de."),
+  CNAME("mc", "mail.cxsrv.de."),
 
   // CNAME - VOICE
   CNAME("amongus", "voice.cxsrv.de."),
