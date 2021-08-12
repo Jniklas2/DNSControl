@@ -129,7 +129,7 @@ D(
   CNAME("crewlink", "voiceold.cxsrv.de."),
   CNAME("music", "voiceold.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
-  
+
   // SRV
   SRV("_ts3._udp.ts3", 1, 1, 9987, "voice.cxsrv.de."),
 
