@@ -84,10 +84,6 @@ D(
   A("voice", "161.97.146.6"),
   AAAA("voice", "2a02:c206:3007:8578::1"),
 
-  // NBG1-DC3 - VoiceOld
-  A("voiceold", "162.55.60.38"),
-  AAAA("voiceold", "2a01:4f8:1c1c:9680::1"),
-
   // TLSA
   TLSA(
     "_25._tcp.mail",
@@ -114,7 +110,7 @@ D(
 
   // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
-  CNAME("git", "voiceold.cxsrv.de."),
+  CNAME("git", "data.cxsrv.de."),
   CNAME("pma", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
