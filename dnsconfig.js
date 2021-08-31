@@ -21,6 +21,7 @@ var MAIL01 = [
   // CNAME
   CNAME("autoconfig", "mail.cxsrv.de."),
   CNAME("autodiscover", "mail.cxsrv.de."),
+  CNAME("webmail", "mail.cxsrv.de."),
 
   // MX
   MX("@", 10, "mail.cxsrv.de."),
