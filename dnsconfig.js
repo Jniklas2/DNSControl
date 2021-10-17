@@ -112,7 +112,6 @@ D(
   // CNAME - DATA
   CNAME("cloud", "data.cxsrv.de."),
   CNAME("git", "data.cxsrv.de."),
-  CNAME("hnbk-aw", "data.cxsrv.de."),
   CNAME("pma", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
@@ -121,6 +120,7 @@ D(
 
   // CNAME - GAMES
   CNAME("amongus", "games.cxsrv.de."),
+  CNAME("gta", "games.cxsrv.de."),
   CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
