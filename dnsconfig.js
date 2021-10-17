@@ -81,9 +81,9 @@ D(
   A("games", "161.97.146.6"),
   AAAA("games", "2a02:c206:3007:8578::1"),
 
-  // DUS1 - VOICE
-  A("voice", "161.97.146.6"),
-  AAAA("voice", "2a02:c206:3007:8578::1"),
+  // NGB1-DC3 - VOICE
+  A("voice", "49.12.205.237"),
+  AAAA("voice", "2a01:4f8:1c17:c55a::1"),
 
   // TLSA
   TLSA(
@@ -91,7 +91,7 @@ D(
     3,
     1,
     1,
-    "d2cffc98d4ea3908c7c5918d1bf9e704d1d8dae3870f081aac91b5ddc0c433e8"
+    "c80ba3bc63c45fb4d78316a103831ef3b3b995b157696c27282f256b5eca5364"
   ),
 
   // TXT
