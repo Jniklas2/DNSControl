@@ -83,7 +83,7 @@ D(
 
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
-  AAAA("voice", "2a01:4f8:1c17:c55a::1"),
+  AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
 
   // TLSA
   TLSA(
