@@ -18,10 +18,15 @@ DEFAULTS(
 );
 
 var MAIL01 = [
-  // CNAME
-  CNAME("autoconfig", "mail.cxsrv.de."),
-  CNAME("autodiscover", "mail.cxsrv.de."),
-  CNAME("webmail", "mail.cxsrv.de."),
+  // ALIAS
+  ALIAS("autoconfig", "mail.cxsrv.de."),
+  ALIAS("autodiscover", "mail.cxsrv.de."),
+  ALIAS("webmail", "mail.cxsrv.de."),
+
+  // MTA-STS
+  ALIAS("mta-sts", "mail.cxsrv.de."),
+  TXT("_mta-sts", "v=STSv1; id=20160831085700Z"),
+  TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin+report@cxsrv.de"),
 
   // MX
   MX("@", 10, "mail.cxsrv.de."),
