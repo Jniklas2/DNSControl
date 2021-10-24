@@ -23,11 +23,6 @@ var MAIL01 = [
   CNAME("autodiscover", "mail.cxsrv.de."),
   CNAME("webmail", "mail.cxsrv.de."),
 
-  // MTA-STS
-  CNAME("mta-sts", "mail.cxsrv.de."),
-  TXT("_mta-sts", "v=STSv1; id=20160831085700Z"),
-  TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin+report@cxsrv.de"),
-
   // DMARC
   DMARC_BUILDER({
     policy: "quarantine",
@@ -35,6 +30,11 @@ var MAIL01 = [
     rua: ["mailto:reports@dmarc.fhsrv.de"],
     failureOptions: "1",
   }),
+
+  // MTA-STS
+  CNAME("mta-sts", "mail.cxsrv.de."),
+  TXT("_mta-sts", "v=STSv1; id=20160831085700Z"),
+  TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin+report@cxsrv.de"),
 
   // MX
   MX("@", 10, "mail.cxsrv.de."),
@@ -83,8 +83,8 @@ D(
   AAAA("data", "2a02:c206:3007:8578::1"),
 
   // FSN1-DC14 - Mail
-  A("mail", "49.12.213.26"),
-  AAAA("mail", "2a01:4f8:1c17:c55a::1"),
+  A("mail", "23.88.42.220"),
+  AAAA("mail", "2a01:4f8:c17:3617::1"),
 
   // DUS1 - GAMES
   A("games", "161.97.146.6"),
