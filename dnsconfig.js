@@ -94,6 +94,9 @@ D(
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
 
+  // NC01 - Status
+  CNAME("status", "status.fhsrv.de."),
+
   // TLSA
   TLSA(
     "_25._tcp.mail",
