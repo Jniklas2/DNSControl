@@ -14,7 +14,7 @@ DEFAULTS(
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
-  DnsProvider(cloudflare),
+  DnsProvider(cloudflare)
 );
 
 var MAIL01 = [
