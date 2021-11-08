@@ -14,7 +14,7 @@ DEFAULTS(
     issue: ["letsencrypt.org"],
     issuewild: ["letsencrypt.org"],
   }),
-  DnsProvider(cloudflare)
+  DnsProvider(cloudflare),
 );
 
 var MAIL01 = [
@@ -93,6 +93,9 @@ D(
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
+
+  // NC01 - Status
+  CNAME("status", "status.fhsrv.de"),
 
   // TLSA
   TLSA(
