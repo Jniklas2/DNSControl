@@ -25,7 +25,7 @@ var MAIL01 = [
 
   // DMARC
   DMARC_BUILDER({
-    policy: "quarantine",
+    policy: "reject",
     ruf: ["mailto:reports@dmarc.fhsrv.de"],
     rua: ["mailto:reports@dmarc.fhsrv.de"],
     failureOptions: "1",
@@ -132,7 +132,6 @@ D(
 
   // CNAME - GAMES
   CNAME("amongus", "games.cxsrv.de."),
-  CNAME("gta", "games.cxsrv.de."),
   CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
