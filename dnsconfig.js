@@ -42,11 +42,11 @@ var MAIL01 = [
   // SPF
   SPF_BUILDER({
     label: "@",
-    parts: ["v=spf1", "mx", "~all"],
+    parts: ["v=spf1", "mx", "-all"],
   }),
   SPF_BUILDER({
     label: "*",
-    parts: ["v=spf1", "mx", "~all"],
+    parts: ["v=spf1", "mx", "-all"],
   }),
 
   // SRV
