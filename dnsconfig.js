@@ -34,7 +34,7 @@ var MAIL01 = [
   // MTA-STS
   CNAME("mta-sts", "mail.cxsrv.de."),
   TXT("_mta-sts", "v=STSv1; id=20160831085700Z"),
-  TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin+report@cxsrv.de"),
+  TXT("_smtp._tls", "v=TLSRPTv1; rua=mailto:admin@cxsrv.de"),
 
   // MX
   MX("@", 10, "mail.cxsrv.de."),
@@ -93,9 +93,6 @@ D(
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
-
-  // NC01 - Status
-  CNAME("status", "status.fhsrv.de."),
 
   // TLSA
   TLSA(
