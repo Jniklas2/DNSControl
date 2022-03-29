@@ -26,8 +26,8 @@ var MAIL01 = [
   // DMARC
   DMARC_BUILDER({
     policy: "reject",
-    ruf: ["mailto:reports@dmarc.fhsrv.de"],
-    rua: ["mailto:reports@dmarc.fhsrv.de"],
+    ruf: ["mailto:dmarc@cxsrv.de"],
+    rua: ["mailto:dmarc@cxsrv.de"],
     failureOptions: "1",
   }),
 
