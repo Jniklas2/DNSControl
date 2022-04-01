@@ -131,7 +131,6 @@ D(
   CNAME("amongus", "games.cxsrv.de."),
   CNAME("eco", "games.cxsrv.de."),
   CNAME("mc", "games.cxsrv.de."),
-  CNAME("mc-stats", "games.cxsrv.de."),
 
   // CNAME - VOICE
   CNAME("bw", "voice.cxsrv.de."),
