@@ -1,5 +1,6 @@
 {
   "cloudflare": {
+    "TYPE": "CLOUDFLAREAPI",
     "apitoken": "$CLOUDFLARE_API_TOKEN"
   }
 }
