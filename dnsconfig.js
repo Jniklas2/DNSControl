@@ -1,5 +1,5 @@
 var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-//var REGISTRAR = NewRegistrar("ThirdParty", "NONE");
+var REGISTRAR = NewRegistrar("ThirdParty", "NONE");
 
 DEFAULTS(
   CAA_BUILDER({
@@ -69,7 +69,7 @@ var MAIL01 = [
 // cxsrv.de
 D(
   "cxsrv.de",
-  //REGISTRAR,
+  REGISTRAR,
   MAIL01,
 
   // FSN1-DC10 / FSN1-DC12 - Backup
@@ -113,7 +113,7 @@ D(
 // rsmg-clan.de
 D(
   "rsmg-clan.de",
-  //REGISTRAR,
+  REGISTRAR,
   MAIL01,
 
   // CNAME - DATA
