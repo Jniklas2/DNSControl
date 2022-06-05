@@ -1,5 +1,5 @@
-var cloudflare = NewDnsProvider("cloudflare", "CLOUDFLAREAPI");
-var REGISTRAR = NewRegistrar("ThirdParty", "NONE");
+var cloudflare = NewDnsProvider("cloudflare");
+var REGISTRAR = NewRegistrar("ThirdParty");
 
 DEFAULTS(
   CAA_BUILDER({
