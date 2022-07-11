@@ -132,7 +132,6 @@ D(
 
   // CNAME - VOICE
   CNAME("bw", "voice.cxsrv.de."),
-  CNAME("crewlink", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
