@@ -126,6 +126,9 @@ D(
   CNAME("pma", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
+  // CNAME - DOCS
+  CNAME("bw", "voice.cxsrv.de."),
+
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
 
@@ -135,7 +138,6 @@ D(
   CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
-  CNAME("bw", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
