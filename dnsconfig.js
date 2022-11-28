@@ -127,7 +127,7 @@ D(
   CNAME("vpn", "data.cxsrv.de."),
 
   // CNAME - DOCS
-  CNAME("bw", "voice.cxsrv.de."),
+  CNAME("bw", "docs.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
