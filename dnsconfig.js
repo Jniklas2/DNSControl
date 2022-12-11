@@ -80,9 +80,9 @@ D(
   A("data", "161.97.146.6"),
   AAAA("data", "2a02:c206:3007:8578::1"),
 
-  // FSN1-DC14 / DOCS
-  A("docs", "5.75.245.137"),
-  AAAA("docs", "2a01:4f8:c17:142f::1"),
+  // FSN1-DC14 / LIB
+  A("lib", "5.75.254.213"),
+  AAAA("lib", "2a01:4f8:c012:f4f4::1"),
 
   // FSN1-DC14 - Mail
   A("mail", "159.69.249.205"),
@@ -126,8 +126,8 @@ D(
   CNAME("pma", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
-  // CNAME - DOCS
-  CNAME("bw", "docs.cxsrv.de."),
+  // CNAME - LIB
+  CNAME("lib", "lib.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
@@ -138,6 +138,7 @@ D(
   CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
+  CNAME("bw", "voice.cxsrv.de."),
   CNAME("music", "voice.cxsrv.de."),
   CNAME("ts3", "voice.cxsrv.de."),
 
