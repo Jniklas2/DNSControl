@@ -18,6 +18,7 @@ jobs:
     needs: check
     steps:
       - uses: actions/checkout@v3.3.0
+
       - name: DNSControl preview
         id: dnscontrol_preview
         uses: koenrh/dnscontrol-action@v3.23.0
@@ -25,6 +26,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         with:
           args: preview
+
       - name: Comment Diff to PR
         uses: unsplash/comment-on-pr@v1.3.0
         env:
@@ -32,6 +34,6 @@ jobs:
         with:
           msg: |
             ```
-            ${{ steps.preview.outputs.output }}
+            ${{ steps.dnscontrol_preview.outputs.preview_comment }}
             ```
           check_for_duplicate_msg: true
