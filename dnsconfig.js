@@ -77,8 +77,8 @@ D(
   AAAA("backup", "2a01:4f8:210:5126::1"),
 
   // DUS1 - DATA
-  A("data", "161.97.146.6"),
-  AAAA("data", "2a02:c206:3007:8578::1"),
+  A("data", "89.116.30.233"),
+  AAAA("data", "2a02:c206:3010:8868::1"),
 
   // FSN1-DC14 / LIB
   A("lib", "5.75.254.213"),
@@ -121,9 +121,9 @@ D(
   MAIL01,
 
   // CNAME - DATA
-  CNAME("cloud", "data.cxsrv.de."),
-  CNAME("git", "data.cxsrv.de."),
-  CNAME("vpn", "data.cxsrv.de."),
+  CNAME("cloud", "games.cxsrv.de."),
+  CNAME("git", "games.cxsrv.de."),
+  CNAME("vpn", "games.cxsrv.de."),
 
   // CNAME - LIB
   CNAME("lib", "lib.cxsrv.de."),
