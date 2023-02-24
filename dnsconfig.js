@@ -121,9 +121,9 @@ D(
   MAIL01,
 
   // CNAME - DATA
-  CNAME("cloud", "games.cxsrv.de."),
-  CNAME("git", "games.cxsrv.de."),
-  CNAME("vpn", "games.cxsrv.de."),
+  CNAME("cloud", "data.cxsrv.de."),
+  CNAME("git", "data.cxsrv.de."),
+  CNAME("vpn", "data.cxsrv.de."),
 
   // CNAME - LIB
   CNAME("lib", "lib.cxsrv.de."),
