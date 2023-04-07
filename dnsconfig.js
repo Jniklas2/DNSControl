@@ -88,10 +88,6 @@ D(
   A("mail", "159.69.249.205"),
   AAAA("mail", "2a01:4f8:1c17:df7a::1"),
 
-  // DUS1 - GAMES
-  A("games", "161.97.146.6"),
-  AAAA("games", "2a02:c206:3007:8578::1"),
-
   // NGB1-DC3 - VOICE
   A("voice", "49.12.205.237"),
   AAAA("voice", "2a01:4f8:c2c:1ab0::1"),
@@ -125,15 +121,15 @@ D(
   CNAME("git", "data.cxsrv.de."),
   CNAME("vpn", "data.cxsrv.de."),
 
+  // CNAME - DATA | GAMES
+  CNAME("amongus", "data.cxsrv.de."),
+  CNAME("mc", "data.cxsrv.de."),
+
   // CNAME - LIB
   CNAME("lib", "lib.cxsrv.de."),
 
   // CNAME - MAIL
   CNAME("mail", "mail.cxsrv.de."),
-
-  // CNAME - GAMES
-  CNAME("amongus", "games.cxsrv.de."),
-  CNAME("mc", "games.cxsrv.de."),
 
   // CNAME - VOICE
   CNAME("bw", "voice.cxsrv.de."),
